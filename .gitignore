@@ -1,0 +1,49 @@
+# See http://help.github.com/ignore-files/ for more about ignoring files.
+
+# ===== Angular (notifications-app) =====
+notifications-app/dist
+notifications-app/tmp
+notifications-app/out-tsc
+notifications-app/bazel-out
+
+# Node
+notifications-app/node_modules
+notifications-app/npm-debug.log
+notifications-app/yarn-error.log
+
+# IDEs and editors
+notifications-app/.idea/
+notifications-app/.project
+notifications-app/.classpath
+notifications-app/.c9/
+notifications-app/*.launch
+notifications-app/.settings/
+notifications-app/*.sublime-workspace
+
+# Visual Studio Code
+notifications-app/.vscode/*
+!notifications-app/.vscode/settings.json
+!notifications-app/.vscode/tasks.json
+!notifications-app/.vscode/launch.json
+!notifications-app/.vscode/extensions.json
+notifications-app/.history/*
+
+# Miscellaneous
+notifications-app/.angular/cache
+notifications-app/.sass-cache/
+notifications-app/connect.lock
+notifications-app/coverage
+notifications-app/libpeerconnection.log
+notifications-app/testem.log
+notifications-app/typings
+
+# ===== .NET / C# (NewsAPI) =====
+NewsAPI/bin/
+NewsAPI/obj/
+NewsAPI/.vs/
+NewsAPI/*.user
+NewsAPI/*.suo
+
+# ===== System files =====
+.DS_Store
+Thumbs.db

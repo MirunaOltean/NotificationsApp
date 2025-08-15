@@ -1,0 +1,10 @@
+<div class="categories-container">
+    <div class="category-div" *ngFor="let category of categories">
+        <button mat-raised-button color="primary" (click)="selectedCategory(category)">
+            {{category.name | uppercase}}
+        </button>
+    </div>
+    <button class="category-div"  mat-raised-button color="primary" (click)="selectedCategory(null)">
+        All
+    </button>
+</div>

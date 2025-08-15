@@ -1,0 +1,19 @@
+<div>
+    <app-categories (emitSelectedCategory)="receiveCategory($event)"></app-categories>
+</div>
+
+<p>
+ {{notificationMessage}}
+</p>
+
+
+<div class="app-container">
+    <div *ngFor="let item of announcements">
+        <app-announcement [announc]="item" class="announcements"> </app-announcement>
+    </div>
+</div>
+
+
+<button class="add-announcement-card" mat-icon-button routerLink="add-announcement">
+    <mat-icon>add</mat-icon>
+</button>

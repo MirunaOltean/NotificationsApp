@@ -1,0 +1,47 @@
+.announcement-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    height: 350px;
+    border: 2px solid #ffcaca;
+    border-radius: 25px;
+    padding: 20px;
+    .title {
+        font-size: 20px;
+        font-weight: 700;
+    }
+    .message {
+        text-overflow: ellipsis;
+        word-wrap: break-word;
+        max-width: 200px;
+        max-height: 150px;
+    }
+    .description {
+        text-overflow: ellipsis;
+        font-style: italic;
+        font-family: Arial, Helvetica, sans-serif;
+        word-wrap: break-word;
+        max-height: 100px;
+        max-width: 200px;
+    }
+    .author {
+        align-self: flex-start;
+        font-weight: 600;
+    }
+    .category{
+        align-self: flex-start;
+        padding-bottom: 20px;
+    }
+    .imageURL {
+        align-items: center;
+        img {
+            height: 110px;
+            width: 155px;
+            border: black;
+            border-width: 3px;
+            border-style: solid;
+        }
+    }
+}

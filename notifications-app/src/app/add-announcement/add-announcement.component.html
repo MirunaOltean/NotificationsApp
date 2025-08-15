@@ -1,0 +1,45 @@
+<body>
+    <div class="main">
+        <div class="container">
+            <form class="announcement-form" id="announcement-form">
+                <h2>Add Your Announcement</h2>
+                <div class="form-group-1">
+                    <input matInput [(ngModel)]="title" type="text" name="title" id="title" placeholder="Title"
+                        required />
+                    <input matInput [(ngModel)]="author" type="text" name="author" id="author" placeholder="Author"
+                        required />
+                    <textarea [(ngModel)]="message" type="text" name="message" id="message"
+                        placeholder="Message"></textarea>
+
+                    <textarea [(ngModel)]="description" type="text" name="description" id="description"
+                        placeholder="Description"></textarea>
+
+
+                    <div class="select-list">
+                        <label>Select a Category:</label>
+                        <select [(ngModel)]="selectedCategory" name="category" id="category">
+                            <option *ngFor="let category of categories" [ngValue]="category">
+                                {{ category.name | uppercase }}
+                            </option>
+                        </select>
+                    </div>
+
+                    <div class="select-list">
+                        <label>Select an Image:</label>
+                        <select [(ngModel)]="image" name="image" id="image">
+                            <option *ngFor="let img of images" [ngValue]="img">
+                                {{img}}
+                            </option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-buttons">
+                    <button mat-button routerLink="home" class="submit">Cancel</button>
+                    <button mat-button class="submit" (click)="addEvent()">Add</button>
+                </div>
+            </form>
+        </div>
+
+    </div>
+</body>

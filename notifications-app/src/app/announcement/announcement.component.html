@@ -1,0 +1,14 @@
+<div class="announcement-container">
+    <span class="title">{{announcement.title}} </span>
+    <span class="author">{{announcement.author | byAuthor: "by "}}</span>
+    <span class="category">Category: {{ announcement.category}}</span>
+    <span class="message">Message: {{announcement.message}}</span>
+    <span class="description">Description: {{announcement.description}}</span>
+    <span class="imageURL">
+        <img mat-card-image src="assets/images/{{announcement.imageUrl}}"/>
+    </span>
+    <span class="buttons">
+        <mat-icon routerLink="announcements/{{announcement.id}}">edit</mat-icon>
+        <mat-icon routerLink="home" (click)="deleteEvent(announcement.id)">delete</mat-icon>
+    </span>
+</div>

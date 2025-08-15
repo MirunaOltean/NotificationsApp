@@ -1,0 +1,165 @@
+a:focus,
+a:active {
+    text-decoration: none;
+    outline: none;
+    transition: all 300ms ease 0s;
+    -moz-transition: all 300ms ease 0s;
+    -webkit-transition: all 300ms ease 0s;
+    -o-transition: all 300ms ease 0s;
+    -ms-transition: all 300ms ease 0s;
+}
+
+input,
+select,
+textarea {
+    outline: none;
+    appearance: unset !important;
+    -moz-appearance: unset !important;
+    -webkit-appearance: unset !important;
+    -o-appearance: unset !important;
+    -ms-appearance: unset !important;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    box-shadow: none !important;
+    -moz-box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    -o-box-shadow: none !important;
+    -ms-box-shadow: none !important;
+}
+
+textarea {
+    width: 480px;
+    height: 50px;
+    resize: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+figure {
+    margin: 0;
+}
+
+p {
+    margin-bottom: 0px;
+}
+
+input:-webkit-autofill {
+    box-shadow: 0 0 0 30px white inset;
+    -moz-box-shadow: 0 0 0 30px white inset;
+    -webkit-box-shadow: 0 0 0 30px white inset;
+    -o-box-shadow: 0 0 0 30px white inset;
+    -ms-box-shadow: 0 0 0 30px white inset;
+}
+
+h2 {
+    line-height: 1.8;
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+    color: #222;
+    font-family: "Roboto Slab";
+    font-size: 20px;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+}
+
+.clear {
+    clear: both;
+}
+
+body {
+    font-size: 13px;
+    line-height: 1.8;
+    background-image: url("background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    font-weight: 400;
+    margin: 0px;
+}
+
+.main {
+    padding: 80px 0;
+    position: relative;
+}
+
+.container {
+    width: 586px;
+    height: 500px;
+    background: rgb(214, 189, 189);
+    margin-left: 400px;
+    border-radius: 10px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -o-border-radius: 10px;
+    -ms-border-radius: 10px;
+}
+
+.announcement-form {
+    padding: 50px 50px;
+}
+
+input,
+select {
+    width: 100%;
+    display: block;
+    border: none;
+    border-bottom: 2px solid #ebebeb;
+    padding: 5px 0;
+    color: rgb(165, 36, 36);
+    margin-bottom: 31px;
+    font-family: "Roboto Slab";
+}
+input:focus,
+select:focus {
+    color: #222;
+    border-bottom: 2px solid #4966b1;
+}
+
+.form-buttons {
+    display: inline;
+}
+
+.submit {
+    display: inline;
+    width: auto;
+    background: #1943ae;
+    color: #fff;
+    padding: 16px 17px;
+    margin-right: 20px;
+    margin-left: 100px;
+    font-size: 13px;
+    border: none;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -o-border-radius: 5px;
+    -ms-border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0px 1px 15px 0px rgba(73, 102, 177, 0.7);
+    -moz-box-shadow: 0px 1px 15px 0px rgba(73, 102, 177, 0.7);
+    -webkit-box-shadow: 0px 1px 15px 0px rgba(73, 102, 177, 0.7);
+    -o-box-shadow: 0px 1px 15px 0px rgba(73, 102, 177, 0.7);
+    -ms-box-shadow: 0px 1px 15px 0px rgba(73, 102, 177, 0.7);
+}
+.submit:hover {
+    background: #3a518d;
+}
+
+.select-list {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+
+.list-item {
+    position: absolute;
+    width: 100%;
+}
