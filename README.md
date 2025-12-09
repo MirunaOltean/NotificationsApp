@@ -1,5 +1,5 @@
 # 📣 Notifications App
-A full-stack notifications and announcements system built with **C#/.NET 6**, **MongoDB**, **SignalR**, and a **TypeScript frontend**.  
+A full-stack notifications and announcements system built with **C#/.NET 6**, **MongoDB**, **SignalR**, and a **Angular frontend**.  
 Users can create, edit, categorize, and receive real-time notifications.
 
 ---
@@ -8,7 +8,7 @@ Users can create, edit, categorize, and receive real-time notifications.
 This application demonstrates a **full-stack implementation** with real-time communication. Key features include:
 
 - A **backend** using **.NET 6** with controllers, services, and a SignalR hub  
-- A **frontend** using **TypeScript** with modular components and services  
+- A **frontend** using **Angular 14** with modular components and services  
 - Real-time notifications delivered via **SignalR**  
 - CRUD operations for announcements and categories stored in **MongoDB**
 
@@ -26,8 +26,8 @@ The project is designed to showcase enterprise-style architecture and full-stack
 - MongoDB
 - Dependency Injection  
 
-### Frontend (TypeScript)
-- TypeScript  
+### Frontend (Angular 14 + TypeScript)
+- Angular 14
 - Components:
   - `announcement`
   - `home`
