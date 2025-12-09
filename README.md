@@ -58,3 +58,18 @@ The project is designed to showcase enterprise-style architecture and full-stack
 
 ---
 
+## 🧪 Testing
+
+The backend includes **unit tests** for the `AnnouncementsController` using **NUnit** and **Moq**:
+
+- **Setup:** Mocked `IAnnouncementCollectionService` for dependency injection  
+- **Tests cover:**
+  - Getting all announcements
+  - Creating announcements (valid and invalid cases)
+  - Updating announcements (success, invalid input, and non-existent IDs)
+  - Deleting announcements (success and invalid IDs)
+  - Null service validation (ensuring proper exceptions are thrown)
+  
+These tests ensure the backend controllers behave correctly, handling both success and error scenarios.
+
+
