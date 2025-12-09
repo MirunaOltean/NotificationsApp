@@ -20,7 +20,32 @@ builder.Services.AddSwaggerGen(
 );
 
 builder.Services.AddSingleton<IAnnouncementCollectionService, AnnouncementCollectionService>();
-builder.Services.Configure<MongoDBSettings>(builder.Configuration.GetSection(nameof(MongoDBSettings)));
+builder.Services.Configure<MongoDBSettings>(options =>
+{
+    var connectionString = Environment.GetEnvironmentVariable("MONGO_CONNECTION_STRING");
+    builder.Services.Configure<MongoDBSettings>(options =>
+    {
+        // Connection string is loaded from the environment:
+        // PowerShell: echo $Env:MONGO_CONNECTION_STRING
+        // To set the MongoDB connection string environment variable:
+        // PowerShell:  setx MONGO_CONNECTION_STRING "the-connection-string"
+        var connectionString = Environment.GetEnvironmentVariable("MONGO_CONNECTION_STRING");
+        if (string.IsNullOrEmpty(connectionString))
+        {
+            throw new InvalidOperationException("MONGO_CONNECTION_STRING environment variable is not set.");
+        }
+
+        options.ConnectionString = connectionString;
+
+        var databaseName = builder.Configuration["MongoDBSettings:DatabaseName"];
+        if (string.IsNullOrEmpty(databaseName))
+        {
+            throw new InvalidOperationException("MongoDBSettings:DatabaseName configuration is not set.");
+        }
+
+        options.DatabaseName = databaseName;
+    });
+});
 builder.Services.AddSingleton<IMongoDBSettings>(sp => sp.GetRequiredService<IOptions<MongoDBSettings>>().Value);
 builder.Services.AddCors(options =>
 {
@@ -65,10 +90,7 @@ app.UseRouting();
 
 app.UseAuthorization();
 
-app.UseEndpoints(endpoints =>
-{
-    endpoints.MapHub<NotificationsHub>("/hub/notifications");
-});
+app.MapHub<NotificationsHub>("/hub/notifications");
 
 app.MapControllers();
 

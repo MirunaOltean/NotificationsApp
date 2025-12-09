@@ -47,6 +47,9 @@ NewsTests/NewsTests/bin/
 NewsTests/NewsTests/obj/
 .vs/
 
+# App settings with secrets
+NewsAPI/NewsAPI/appsettings.Development.json
+
 # ===== System files =====
 .DS_Store
 Thumbs.db
