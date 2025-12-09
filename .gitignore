@@ -38,11 +38,14 @@ notifications-app/testem.log
 notifications-app/typings
 
 # ===== .NET / C# (NewsAPI) =====
-NewsAPI/bin/
-NewsAPI/obj/
+NewsAPI/NewsAPI/bin/
+NewsAPI/NewsAPI/obj/
 NewsAPI/.vs/
-NewsAPI/*.user
-NewsAPI/*.suo
+NewsAPI/NewsAPI/*.user
+NewsAPI/NewsAPI/*.suo
+NewsTests/NewsTests/bin/
+NewsTests/NewsTests/obj/
+.vs/
 
 # ===== System files =====
 .DS_Store
